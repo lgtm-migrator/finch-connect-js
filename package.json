@@ -1,11 +1,13 @@
 {
-  "name": "finch-connect",
+  "name": "finch-connect-js",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "rm -rf dist; rollup -c; rm -rf dist/dts",
+    "prebuild": "rm -rf dist",
+    "build": "rollup -c",
+    "postbuild": "rm -rf dist/dts",
     "lint": "eslint .",
     "test": "jest"
   },
@@ -17,8 +19,11 @@
     "@typescript-eslint/eslint-plugin": "^5.30.5",
     "@typescript-eslint/parser": "^5.30.5",
     "eslint": "^8.19.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
     "jest": "^28.1.2",
     "jest-environment-jsdom": "^28.1.2",
+    "prettier": "2.7.1",
     "rollup": "^2.75.7",
     "rollup-plugin-dts": "^4.2.2",
     "rollup-plugin-terser": "^7.0.2",

@@ -38,15 +38,16 @@ export default class FinchConnect {
   }
 
   static initialize(options: Partial<FinchConnectOptions> = {}) {
-    const mergedOptions = Object.assign({
+    const mergedOptions = {
       clientId: '',
       products: [],
       sandbox: false,
       manual: false,
       onSuccess: () => ({}),
       onError: () => ({}),
-      onClose: () => ({})
-    }, options);
+      onClose: () => ({}),
+      ...options
+    }
 
     return new FinchConnect(mergedOptions);
   }
