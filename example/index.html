@@ -6,7 +6,15 @@
     <button id="connect-button"> Open Finch Connect!</button>
     <script>
       const button = document.getElementById('connect-button');
-      const connect = FinchConnect.initialize();
+      const connect = FinchConnect.initialize({
+    clientId: '<your-client-id>',
+    products: ['company', 'directory', 'employment'],
+    sandbox: false,
+    manual: false,
+    onSuccess: () => console.log('Success!'),
+    onError: (e) => console.log(e),
+    onClose: () => console.log('Closed'),
+});
       button.addEventListener('click', () => {
         connect.open();
       })
