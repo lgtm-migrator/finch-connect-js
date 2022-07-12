@@ -1,0 +1,15 @@
+<html>
+  <head>
+    <script src="../dist/index.js"></script>
+  </head>
+  <body>
+    <button id="connect-button"> Open Finch Connect!</button>
+    <script>
+      const button = document.getElementById('connect-button');
+      const connect = FinchConnect.initialize();
+      button.addEventListener('click', () => {
+        connect.open();
+      })
+    </script>
+  </body>
+</html>
