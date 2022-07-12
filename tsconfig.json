@@ -1,5 +1,6 @@
 {
   "include": ["src/**/*"],
+  "extends": "@tsconfig/node16/tsconfig.json",
   "compilerOptions": {
     "target": "es5",                                  /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
     "module": "ES2015",                                /* Specify what module code is generated. */
