@@ -1,5 +1,5 @@
 import { FinchConnectOptions } from './types';
-export const constructAuthUrl = (baseUrl: string, redirectUrl: string, finchConnectOptions: FinchConnectOptions) => {
+export const constructAuthUrl = (baseUrl: string, redirectUrl: string, finchConnectOptions: FinchConnectOptions): string => {
     const { clientId, payrollProvider, products, manual, sandbox } = finchConnectOptions;
 
     const authUrl = new URL(`${baseUrl}/authorize`);

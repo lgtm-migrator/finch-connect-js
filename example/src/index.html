@@ -11,8 +11,8 @@
     products: ['company', 'directory', 'employment'],
     sandbox: false,
     manual: false,
-    onSuccess: () => console.log('Success!'),
-    onError: (e) => console.log(e),
+    onSuccess: ({ code }) => console.log(`Success with code: ${code}`),
+    onError: ({ errorMessage }) => console.log(`Error: ${errorMessage}`),
     onClose: () => console.log('Closed'),
 });
       button.addEventListener('click', () => {
