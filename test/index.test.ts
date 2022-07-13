@@ -36,7 +36,7 @@ describe('FinchConnect', () => {
       connect = FinchConnect.initialize();
       const iframe = document.getElementsByTagName('iframe')[0];
 
-      expect(iframe.style.display).toEqual('none');
+      expect(iframe.style.visibility).toEqual('hidden');
     })
 
     test('sets up an iframe with a unique id', () => {
@@ -78,12 +78,12 @@ describe('FinchConnect', () => {
     test('open toggles iframe display', () => {
       connect.open();
 
-      expect(iframe.style.display).toEqual('');
+      expect(iframe.style.visibility).toEqual('visible');
     });
     test('close toggles iframe display', () => {
       connect.close();
 
-      expect(iframe.style.display).toEqual('none');
+      expect(iframe.style.visibility).toEqual('hidden');
     });
 
     test('destroy removes iframe element', () => {
