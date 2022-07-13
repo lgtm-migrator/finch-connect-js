@@ -25,7 +25,7 @@ export default class FinchConnect {
       FinchConnect.DEFAULT_FINCH_REDIRECT_URI,
       this.options);
 
-    iframe.style.display = 'none';
+    iframe.style.visibility = 'hidden';
     iframe.style.position = 'fixed';
     iframe.style.zIndex = '999';
     iframe.style.height = '100%';
@@ -80,13 +80,16 @@ export default class FinchConnect {
 
   open() {
     if (this.iframe) {
-      this.iframe.style.display = '';
+      this.iframe.style.visibility = 'visible';
     }
   }
 
   close() {
     if (this.iframe) {
-      this.iframe.style.display = 'none';
+      this.iframe.style.visibility = 'hidden';
+      // force reloading iframe to be on the front page when open next time
+      // eslint-disable-next-line no-self-assign
+      this.iframe.src = this.iframe.src;
     }
   }
 
