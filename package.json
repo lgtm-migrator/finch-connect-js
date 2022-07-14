@@ -8,7 +8,8 @@
     "prebuild": "rm -rf dist",
     "build": "webpack --mode=production",
     "lint": "eslint .",
-    "test": "jest --runInBand"
+    "test": "jest --runInBand",
+    "start": "webpack --mode=development && cd example && npm run dev-server"
   },
   "license": "MIT",
   "devDependencies": {
