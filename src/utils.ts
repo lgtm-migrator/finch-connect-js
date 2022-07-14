@@ -17,4 +17,4 @@ export const constructAuthUrl = (
     if (sandbox) authUrl.searchParams.append('sandbox', String(sandbox));
 
     return authUrl.href;
-  };
+};
