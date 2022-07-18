@@ -56,7 +56,7 @@ describe('FinchConnect', () => {
       const iframe = document.getElementById(FinchConnect.FINCH_CONNECT_IFRAME_ID) as HTMLIFrameElement;
 
       expect(iframe?.src).toEqual(
-        `https://connect.tryfinch.com/authorize?client_id=client-id&products=company+directory+employment&app_type=spa&redirect_uri=https%3A%2F%2Ftryfinch.com&mode=employer`
+        `https://connect.tryfinch.com/authorize?client_id=client-id&products=company+directory+employment&app_type=spa&redirect_uri=https%3A%2F%2Ftryfinch.com&mode=employer&sdk_version=js-1.0.0`
       );
     })
   })

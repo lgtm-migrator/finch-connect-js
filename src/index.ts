@@ -57,7 +57,10 @@ export default class FinchConnect {
 
     const { code, error, closed } = event.data;
 
-    this.close();
+    // only close when no errors, otherwise the force refresh in close
+    // will keep re-sending the request that failed
+    if (!error) this.close();
+
     if (code) handleFinchAuthSuccess(code);
     else if (error) handleFinchAuthError(error);
     else if (closed) handleFinchAuthClose();
