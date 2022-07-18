@@ -15,6 +15,7 @@ export const constructAuthUrl = (
     authUrl.searchParams.append('mode', 'employer');
     if (manual) authUrl.searchParams.append('manual', String(manual));
     if (sandbox) authUrl.searchParams.append('sandbox', String(sandbox));
+    if (SDK_VERSION) authUrl.searchParams.append('sdk_version', SDK_VERSION);
 
     return authUrl.href;
 };
