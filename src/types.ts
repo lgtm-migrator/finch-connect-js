@@ -1,3 +1,9 @@
+declare global {
+    // need var to declare global value
+    // eslint-disable-next-line no-var
+    var SDK_VERSION: string | null;
+}
+
 export type SuccessEvent = {
     code: string;
 };
