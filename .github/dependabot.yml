@@ -1,0 +1,30 @@
+version: 2
+
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    versioning-strategy: increase
+    assignees:
+      - skilbjo
+      - aren55555
+    rebase-strategy: auto
+    open-pull-requests-limit: 10
+    ignore:
+      - dependency-name: devtools-protocol # just needed for a Cookie type
+    commit-message:
+      prefix: fix
+      include: scope
+
+  - package-ecosystem: github-actions
+    directory: /
+    open-pull-requests-limit: 10
+    schedule:
+      interval: weekly
+    assignees:
+      - skilbjo
+      - aren55555
+    commit-message:
+      prefix: fix
+      include: scope
