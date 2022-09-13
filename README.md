@@ -77,3 +77,11 @@ Method | Description
 </html>
 
 ```
+
+### Testing
+
+Tests are written using Jest. To run tests, run the following command:
+
+```
+npm run test
+```
