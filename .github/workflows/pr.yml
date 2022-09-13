@@ -10,6 +10,19 @@ defaults:
     shell: bash
 
 jobs:
+  run-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          persist-credentials: false
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - run: npm install
+
+      - run: npm run test
+
   dependabot-approve-and-automerge:
     runs-on: ubuntu-latest
     if: ${{ github.actor == 'dependabot[bot]' }}
