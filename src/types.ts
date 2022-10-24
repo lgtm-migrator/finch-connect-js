@@ -18,6 +18,7 @@ export type FinchConnectOptions = {
     sandbox: boolean;
     manual: boolean;
     payrollProvider?: string;
+    category?: string;
   
     onSuccess: (e: SuccessEvent) => void;
     onError: (e: ErrorEvent) => void;

@@ -19,6 +19,7 @@ Parameter | Required | Description
 ---------|----------|---------
  `clientId` | true | Your `client_id`, a unique identifier for your application.
  `products` | true | An array of permissions your application is requesting access to. 
+ `category` | false | Either 'hris' or 'ats' for specifying the product category. Defaults to 'hris' if not passed.
  `payrollProvider` | false | An optional parameter that allows you to bypass the provider selection screen by providing a valid provider `id`. 
  `sandbox` | false | An optional value that allows users to switch on the sandbox mode to login with fake credentials and test applications against mock data. 
  `manual` | false | An optional value which when set to true displays both Automated API and Assisted API providers on the selection screen.

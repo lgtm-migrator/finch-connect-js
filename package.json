@@ -1,6 +1,6 @@
 {
   "name": "finch-connect-js",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Finch Connect JS SDK",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

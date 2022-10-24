@@ -23,7 +23,8 @@ export default class FinchConnect {
     iframe.src = constructAuthUrl(
       FinchConnect.BASE_FINCH_CONNECT_URI,
       FinchConnect.DEFAULT_FINCH_REDIRECT_URI,
-      this.options);
+      this.options
+    );
 
     iframe.style.visibility = 'hidden';
     iframe.style.position = 'fixed';
